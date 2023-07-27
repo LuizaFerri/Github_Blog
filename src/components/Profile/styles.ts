@@ -19,7 +19,7 @@ export const Avatar = styled.img`
 
 export const ContainerInfo = styled.div`
   display: flex;
-  gap: 10px;
+  gap: 20px;
   p {
     font-weight: 400px;
   }

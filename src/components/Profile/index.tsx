@@ -58,8 +58,7 @@ export function Profile() {
                 </Text>
                 <Text>
                   <img src={iconFollowers} alt="followers" />
-                  {profileData.followers}
-                  seguidores
+                  {profileData.followers} seguidores
                 </Text>
               </ContainerInfo>
             </ContainerProfileinfos2>
