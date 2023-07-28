@@ -4,6 +4,7 @@ import ptBR from "date-fns/locale/pt-BR";
 import { Post, Body, ContainerPost, CardLimit, InfosPost } from "./style";
 import { ContextPost } from "../../contexts/ContextPost";
 import ReactMarkdown from "react-markdown";
+import { Link } from "react-router-dom";
 
 export function PostsList() {
   const { postData } = useContext(ContextPost);
@@ -20,20 +21,22 @@ export function PostsList() {
 
           return (
             <Post key={post.number}>
-              <div>
-                <InfosPost>
-                  <h2>{post.title}</h2>
-                  <p>
-                    {formatDistanceToNow(new Date(post.created_at), {
-                      addSuffix: true,
-                      locale: ptBR,
-                    })}
-                  </p>
-                </InfosPost>
-                <Body>
-                  <ReactMarkdown children={markdown} />
-                </Body>
-              </div>
+              <Link to={`/post/${post.number}`}>
+                <div>
+                  <InfosPost>
+                    <h2>{post.title}</h2>
+                    <p>
+                      {formatDistanceToNow(new Date(post.created_at), {
+                        addSuffix: true,
+                        locale: ptBR,
+                      })}
+                    </p>
+                  </InfosPost>
+                  <Body>
+                    <ReactMarkdown children={markdown} />
+                  </Body>
+                </div>
+              </Link>
             </Post>
           );
         })}

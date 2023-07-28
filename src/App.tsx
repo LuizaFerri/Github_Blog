@@ -1,10 +1,11 @@
-import { Blog } from "./Pages/Blog";
+import { Router } from "./Router";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
-    <>
-      <Blog />
-    </>
+    <BrowserRouter>
+      <Router />
+    </BrowserRouter>
   );
 }
 

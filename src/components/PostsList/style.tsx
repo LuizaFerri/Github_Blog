@@ -5,6 +5,11 @@ export const CardLimit = styled.div`
   justify-content: center;
   margin-top: 50px;
   margin-bottom: 50px;
+
+  a{
+    text-decoration: none;
+    color: #fff;
+  }
 `;
 
 export const ContainerPost = styled.div`
